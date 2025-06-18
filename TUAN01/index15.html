@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+
+    <h2>Form Thanh Toán Đơn Hàng</h2>
+
+    <form action="#" method="post">
+
+        <!-- Thông tin cá nhân -->
+        <label for="fullname">Họ và tên:</label><br>
+        <input type="text" id="fullname" name="fullname" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Số điện thoại:</label><br>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{9,11}" placeholder="Nhập số điện thoại" required><br><br>
+
+        <!-- Địa chỉ -->
+        <label for="address">Địa chỉ:</label><br>
+        <input type="text" id="address" name="address" required><br><br>
+
+        <label for="city">Thành phố:</label><br>
+        <input type="text" id="city" name="city" required><br><br>
+
+        <label for="postal">Mã bưu điện:</label><br>
+        <input type="text" id="postal" name="postal" pattern="[0-9]{5,6}" placeholder="Ví dụ: 70000" required><br><br>
+
+        <!-- Hình thức thanh toán -->
+        <p>Chọn hình thức thanh toán:</p>
+        <input type="radio" id="e-wallet" name="payment" value="e-wallet" required>
+        <label for="e-wallet">Ví điện tử</label><br>
+
+        <input type="radio" id="credit-card" name="payment" value="credit-card">
+        <label for="credit-card">Thẻ tín dụng</label><br>
+
+        <input type="radio" id="cod" name="payment" value="cod">
+        <label for="cod">Thanh toán khi nhận hàng</label><br><br>
+
+        <button type="submit">Thanh toán</button>
+
+    </form>
+
+</body>
+
+</body>
+</html>
