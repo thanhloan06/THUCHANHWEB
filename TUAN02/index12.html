@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        body{ 
+            font-family: sans-serif; 
+            padding: 20px; 
+            background-color:lightgrey;    
+        }
+        
+        label{ 
+            display: block; 
+            margin: 10px 0 5px; 
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] { margin-right: 8px; transform: scale(1.1); }
+        
+        textarea{ 
+            width: 100%; 
+            margin-top: 5px; 
+        }
+  </style>
+
+</head>
+<body>
+     <h1>Khảo sát ý kiến</h1>
+
+  <form>
+  
+    <label>Bạn có hài lòng với trang Web này không?</label>
+    <label><input type="radio" name="like" value="yes">Có</label>
+    <label><input type="radio" name="like" value="no">Không</label>
+
+    <label>Bạn thấy nó tốt ở điểm nào?</label>
+    <label><input type="checkbox" name="feature" value="ui">Giao diện</label>
+    <label><input type="checkbox" name="feature" value="speed">Tốc độ</label>
+
+    <label>Góp ý:</label>
+    <textarea rows="3" placeholder="Nhập ý kiến..."></textarea>
+
+    <br><br>
+    <button type="submit">Gửi</button>
+  </form>
+
+</body>
+</html>

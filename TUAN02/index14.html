@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: rgb(245, 165, 177);
+        }
+
+        .feedback-form {
+            max-width: 500px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .feedback-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .feedback-form label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .feedback-form input[type="email"],
+        .feedback-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .star-rating {
+            direction: rtl;
+            text-align: left;
+            font-size: 24px;
+            margin-top: 8px;
+        }
+
+        .star-rating input {
+            display: none;
+        }
+
+        .star-rating label {
+            color: #ccc;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .star-rating input:checked ~ label,
+        .star-rating label:hover,
+        .star-rating label:hover ~ label {
+            color: #77d18b;
+        }
+
+        .feedback-form button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            background: rgb(245, 165, 177);
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .feedback-form button:hover {
+            background: #77d18b;
+        }
+    </style>
+</head>
+<body>
+    <body>
+  <div class="feedback-form">
+    <h2>GỬI PHẢN HỒI</h2>
+    
+    <form>
+      <label>Đánh giá:</label>
+      <div class="star-rating">
+        <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+        <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+        <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+        <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+        <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+      </div>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="you@example.com" required>
+
+      <label for="message">Nội dung phản hồi:</label>
+      <textarea id="message" rows="5" placeholder="Viết phản hồi ở đây..." required></textarea>
+
+      <button type="submit">Gửi phản hồi</button>
+    </form>
+  </div>
+</body>
+</body>
+</html>

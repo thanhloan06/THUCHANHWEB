@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thanh Toán Đơn Hàng</title>
+  <style>
+    body {
+        font-family: sans-serif;
+        background: #f3b990;
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container {
+        width: 100%;
+        max-width: 500px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+    label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #444;
+    }
+    input, select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    button {
+        margin-top: 20px;
+        width: 100%;
+        padding: 12px;
+        background: #e87156;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    button:hover {
+        background: #f7c74c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Thanh Toán Đơn Hàng</h2>
+    
+    <label for="address">Địa chỉ giao hàng</label>
+    <input type="text" id="address" placeholder="Nhập địa chỉ của bạn">
+
+    <label for="method">Phương thức thanh toán</label>
+    <select id="method">
+      <option>Thanh toán khi nhận hàng</option>
+      <option>Thẻ tín dụng</option>
+      <option>Ví điện tử</option>
+    </select>
+
+    <button>Gửi</button>
+  </div>
+</body>
+</html>

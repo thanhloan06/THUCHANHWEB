@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đặt Bàn</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #c4e2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background: #b9efd3;
+      border: 2px solid #4CAF50;
+      border-radius: 10px;
+      padding: 20px 25px;
+      width: 300px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    form h2 {
+      text-align: center;
+      color: #4CAF50;
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 15px;
+      width: 100%;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #43a047;
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <h2>Đặt Bàn</h2>
+
+    <label for="datetime">Ngày & Giờ:</label>
+    <input type="datetime-local" id="datetime" name="datetime" required>
+
+    <label for="guests">Số người:</label>
+    <input type="number" id="guests" name="guests" min="1" max="50" required>
+
+    <label for="notes">Yêu cầu:</label>
+    <textarea id="notes" name="notes" rows="3" placeholder="(Không bắt buộc)"></textarea>
+
+    <button type="submit">Đặt bàn</button>
+  </form>
+
+</body>
+</html>

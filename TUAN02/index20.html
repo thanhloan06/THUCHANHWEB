@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  body {
+    margin: 0;
+    padding: 40px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+  }
+
+  .cv-container {
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+    gap: 20px;
+  }
+
+  .left-column, .right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .avatar {
+    text-align: center;
+  }
+
+  .avatar img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid lightpink;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .section {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+
+  .info {
+    background-color: rgb(184, 244, 184);
+  }
+
+  .skills {
+    background-color: rgb(255, 194, 170);
+  }
+
+  .education {
+    background-color: rgb(204, 255, 255);
+  }
+
+  h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 22px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 8px;
+  }
+
+  ul {
+    padding-left: 20px;
+    margin: 0;
+  }
+
+  .edu-block {
+    margin-bottom: 15px;
+  }
+
+  .edu-block h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #37474f;
+  }
+
+  .edu-block p {
+    margin: 4px 0 0;
+    color: #666;
+  }
+</style>
+</head>
+<body>
+    <body>
+  <div class="cv-container">
+    <!-- Cột trái -->
+    <div class="left-column">
+      <div class="avatar">
+        <img src="https://haycafe.vn/wp-content/uploads/2021/12/Hinh-anh-hoat-hinh-de-thuong-cute-dep-nhat.jpeg" alt="Ảnh đại diện">
+      </div>
+
+      <div class="section info">
+        <h2>Thông tin cá nhân</h2>
+        <p><strong>Họ tên:</strong> Đào Thị Thanh Loan</p>
+        <p><strong>Email:</strong> thanhloandao2006@gmail.com</p>
+        <p><strong>Điện thoại:</strong> 0123456789</p>
+        <p><strong>Địa chỉ:</strong> ABC/D/EF Đường GH, tp.HCM</p>
+      </div>
+
+      <div class="section skills">
+        <h2>Kỹ năng</h2>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>ReactJS, VueJS</li>
+          <li>Node.js, Express</li>
+          <li>Git, GitHub</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Cột phải -->
+    <div class="right-column">
+      <div class="section education">
+        <h2>Học vấn</h2>
+        <div class="edu-block">
+          <h3>Đại học Công Nghiệp TP.HCM</h3>
+          <p>Đã tốt nghiệp năm 202X</p>
+        </div>
+        <div class="edu-block">
+          <h3>THPT Nguyễn Trung Trực</h3>
+          <p>Đã tốt nghiệp năm 2024</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</body>
+</html>

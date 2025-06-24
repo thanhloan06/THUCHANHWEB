@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <style>
+    body {
+    margin: 0;
+    height: 100vh;
+    background-color: lightgray;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    font-family: Arial, sans-serif;
+    }
+
+    label, #name, #pass{ 
+        display: block;
+      }
+      #name , #pass{
+       margin-bottom: 10px;
+       border: 1px solid grey;
+       box-shadow: 0 2px 6px rgb(0,0,0,0.4);
+      }
+
+#button{
+    margin-top: 15px;
+    padding: 12px;
+}
+
+h1{
+    text-align: center;
+}
+  </style>
+</head>
+<body>
+  <form>
+    <h1>FORM ĐĂNG NHẬP</h1>
+
+    <label for="name">Username</label>
+    <input type="text" id="name" name="username">
+
+    <label for="pass">Password</label>
+    <input type="text" id="pass" name="password">
+
+    <input type="submit" value="GỬI" id="button">
+  </form>
+</body>
+</html>
