@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Môn học</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8fa9a;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: rgb(214, 96, 96);
+        }
+
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2–3 cột tự động */
+            gap: 20px;
+        }
+
+        .subject-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Danh Sách Các Môn Học Yêu Thích</h1>
+    <div class="subject-grid"> 
+        <div class="subject-title">Toán Cao Cấp 1</div>
+        <div class="subject-title">Hệ Thống Và Công Nghệ Web</div>
+        <div class="subject-title">Kinh Tế Chính Trị</div>
+        <div class="subject-title">Vật Lý Đại Cương</div>
+    </div>
+    </body>
+    </html>
