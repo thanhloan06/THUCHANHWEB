@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+        
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+        button {
+            background-color: cornflowerblue;
+            border-radius: 5px;
+        }
+        
+        button:hover {
+            background-color: lightblue;
+        }
+        h2{
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Nhập số điện thoại:</h2>
+    <input type="text" id="phoneInput" placeholder="Nhập số điện thoại">
+    <button id="checkBtn">Nhập</button>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('checkBtn').addEventListener('click', function() {
+            const phone = document.getElementById('phoneInput').value.trim();
+            const result = document.getElementById('result');
+
+            result.classList.remove('error', 'success');
+
+            if (phone === "") {
+                result.textContent = "Bạn chưa nhập số điện thoại.";
+                result.classList.add('error');
+                return;
+            }
+
+            if (!/^\d{9,11}$/.test(phone)) {
+                result.textContent = "Số điện thoại không hợp lệ.";
+                result.classList.add('error');
+                return;
+            }
+
+            result.textContent = "Số điện thoại hợp lệ.";
+            result.classList.add('success');
+        });
+    </script>
+</body>
+
+</html>
