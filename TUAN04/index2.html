@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        button {
+            background-color: cornflowerblue;
+            border-radius: 5px;
+        }
+        
+        button:hover {
+            background-color: lightblue;
+        }
+        h2{
+            font-size: 17px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Tên:</h2>
+    <input type="text" id="nameInput" placeholder="Nhập tên">
+    <button id="helloBtn">Nhập</button>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('helloBtn').addEventListener('click', function() {
+            const fullName = document.getElementById('nameInput').value.trim();
+
+            if (fullName === "") {
+                document.getElementById('result').textContent = "Bạn chưa nhập tên.";
+                return;
+            }
+
+            const nameParts = fullName.split(" ");
+            const lastName = nameParts[nameParts.length - 1];
+
+            document.getElementById('result').textContent = "Hello " + lastName;
+        });
+    </script>
+</body>
+
+</html>
