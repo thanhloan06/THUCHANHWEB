@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #fff8f0;
+            padding: 30px;
+            line-height: 1.5;
+        }
+        form {
+            max-width: 700px;
+            margin: auto;
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #d2691e;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        .flex-radio, .flex-checkbox {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        .flex-radio label, .flex-checkbox label {
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .submit-btn {
+            text-align: right;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            background-color:#d2691e;
+            color: white;
+            box-shadow: 3px 3px #aaa;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: red;
+        }
+  </style>
+</head>
+<body>
+
+  <form>
+    <h1>Khảo sát ý kiến về quán Cafe</h1>
+
+    <label for="name">Họ và tên:</label>
+    <input type="text" id="name" name="name" placeholder="Nhập họ tên">
+
+    <label>Giới tính:</label>
+    <div class="flex-radio">
+      <label><input type="radio" name="gender" value="Nam"> Nam</label>
+      <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
+      <label><input type="radio" name="gender" value="Khác"> Khác</label>
+    </div>
+
+    <label for="age">Độ tuổi:</label>
+    <select id="age" name="age">
+      <option value="">-- Chọn độ tuổi --</option>
+      <option value="18-24">18–24</option>
+      <option value="25-34">25–34</option>
+      <option value="35-50">35–50</option>
+      <option value="50+">Trên 50</option>
+    </select>
+
+    <label>Điểm bạn đánh giá cao ở quán cafe:</label>
+    <div class="flex-checkbox">
+      <label><input type="checkbox" name="criteria" value="Phục vụ nhiệt tình">Phục vụ nhiệt tình</label>
+      <label><input type="checkbox" name="criteria" value="Thức uống ngon miệng">Thức uống ngon miệng</label>
+      <label><input type="checkbox" name="criteria" value="Giá hợp lý">Giá hợp lý</label>
+      <label><input type="checkbox" name="criteria" value="Quán decor đẹp">Quán decor đẹp</label>
+    </div>
+
+    <label for="feedback">Bạn không hài lòng ở điểm gì:</label>
+    <textarea id="feedback" name="feedback" placeholder="Nhập ý kiến của bạn..."></textarea>
+
+    <div class="submit-btn">
+      <button type="submit">Gửi</button>
+    </div>
+  </form>
+
+</body>
+</html>
