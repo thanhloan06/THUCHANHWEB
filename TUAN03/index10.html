@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 30px;
+      background: #fff8ef;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fdecd1;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      transition: 0.3s;
+    }
+    .card:hover {
+      background: #ffc0cb;
+    }
+    .card:hover img {
+      transform: scale(1.05);
+    }
+    h3, h1{
+        margin: 12px;
+        color: rgb(212, 47, 47);
+        font-weight: 700;
+        text-align: center;
+    }
+    p{
+        margin: 20px;
+        font-style: italic;
+        color: rgb(96, 91, 91);
+    }
+    button{
+        background-color: rgb(242, 242, 147);
+        border: 2px dashed black;
+        border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Portfolio cá nhân</h1>
+  <div class="grid">
+    <button><strong>Tên:</strong> Thanh Loan <br>
+        <strong>MSSV:</strong> 24708431 <br>
+        <strong>Sinh ngày:</strong> 18/06/2006
+    </button>
+    <br></br>
+    <div class="card">
+      <img src="https://image.slidesdocs.com/responsive-images/background/pink-shop-coffee-houses-cartoon-powerpoint-background_2e5df995c5__960_540.jpg" alt="Dự án 1">
+      <h3>Web đánh giá quán cà phê</h3>
+      <p>Người dùng có thể chia sẻ và tìm kiếm quán cà phê theo khu vực.</p>
+    </div>
+    <div class="card">
+      <img src="https://bizflyportal.mediacdn.vn/bizflyportal/2584/13462/2023/03/24/21/36/6-buoc-thuc-hien-du-an-thiet-ke-giao-dien-app-1-16796470092842.jpg" alt="Dự án 2">
+      <h3>Ứng dụng học tập</h3>
+      <p>App hỗ trợ lập kế hoạch học tập và theo dõi tiến độ.</p>
+    </div>
+  </div>
+</body>
+</html>
