@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fdf1e5;
+      font-family: sans-serif;
+      margin: 0;
+    }
+    form {
+      border-radius: 10px;
+      border-style: groove;
+      box-shadow: 5px 5px;
+      padding: 30px;
+      background-color: #fffbe9;
+      text-align: center;
+      min-width: 300px;
+    }
+    h1 {
+      color: palevioletred;
+      margin-bottom: 20px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    input {
+      border-radius: 10px;
+      color: black;
+      box-shadow: 2px 2px;
+      padding: 6px 10px;
+      width: 200px;
+    }
+    button {
+      border-radius: 5px;
+      box-shadow: 3px 3px;
+      padding: 8px 20px;
+    }
+    button:hover, button:focus {
+      background-color: palevioletred;
+      font-weight: bolder;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <h1>Đăng nhập</h1>
+    <div class="container">
+      <strong>Username:</strong> <input type="text" /><br />
+      <strong>Password:</strong> <input type="password" /><br />
+    </div>
+    <button>Đăng nhập</button>
+  </form>
+</body>
+</html>
