@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        font-weight: 700;
+        font-size: 40px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    #m1, #m3{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    #m2{
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 10px;
+        align-items: center;
+    }
+    p{
+        font-size: 1rem;
+        color: rgb(68, 68, 174);
+    }
+    iframe{
+        color:rgb(109, 108, 108);
+        border-radius: 20px;
+        box-shadow: 3px 3px;
+    }
+    body{
+        background-color: rgb(235, 234, 234);
+    }
+</style>
+<body>
+    <h1>Video</h1>
+    <div class="container">
+        <div id="m1" class="item1">
+            <p>Tin tức an ninh trật tự nóng, thời sự Việt Nam mới nhất 24h sáng 4/6 | ANTV</p>
+            <iframe src="https://www.youtube.com/embed/qCrxeJsXgow" frameborder="0"></iframe>
+        </div>
+        <div id="m2" class="item2">
+            <p>Sứ mệnh của lực lượng CAND vì một Việt Nam hùng cường, thịnh vượng và hạnh phúc | ANTV</p>
+            <iframe src="https://www.youtube.com/embed/ycjxmcpWHQo" frameborder="0"></iframe>
+        </div>
+        <div id="m3" class="item3">
+            <p>Bộ trưởng Lương Tam Quang dự hội nghị triển khai công tác năm 2025 | Thời sự an ninh ngày 5/1 | ANTV</p>
+            <iframe src="https://www.youtube.com/embed/pSDMcoyvwwg" frameborder="0"></iframe>
+        </div>
+    </div>
+</body>
+</html>
