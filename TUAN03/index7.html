@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        font-weight: 700;
+        font-size: 40px;
+        margin-bottom: 10px;
+        text-align: center;
+        color: brown;
+    }
+    .container{
+        display:grid;
+        grid-template-areas: "m1 m2 m3"
+                            "m4 m5 m6";
+        grid-template-columns: 1fr 1fr 1fr;
+        gap:20px;
+    }
+    img{
+        border-radius: 10px;
+        width: 300px;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <h1>Thư viện ảnh</h1>
+    <div class="container">
+        <div id="m1" class="item">
+            <img src="https://i.pinimg.com/736x/cc/d3/58/ccd358616ede31d3f54e3c6b58981564.jpg" alt="">
+        </div>
+        <div id="m2" class="item">
+            <img src="https://i.pinimg.com/originals/9d/05/7e/9d057eb1f29e0865e3ead055482b0000.jpg" alt="">
+        </div>
+        <div id="m3" class="item">
+            <img src="https://kpopping.com/documents/70/1/1930/230524-G-I-DLE-Yuqi-Queencard-at-Show-Champion-documents-1.jpeg?v=2409c" alt="">
+        </div>
+        <div id="m4" class="item">
+            <img src="https://kpopping.com/documents/07/0/800/230601-G-I-DLE-Yuqi-Queencard-at-M-COUNTDOWN-documents-1(1).jpeg?v=9270a" alt="">
+        </div>
+        <div id="m5" class="item">
+            <img src="https://i.pinimg.com/736x/40/e4/cf/40e4cfcb866df3469f4a10e6db211a07.jpg" alt="">
+        </div>
+        <div id="m6" class="item">
+            <img src="https://rare-gallery.com/mocahbig/1390354-GIDLE-Kpop-Girls-Yuqi-Song-Yuqi.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>
