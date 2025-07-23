@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            background-color: cornflowerblue;
+            border-radius: 5px;
+        }
+        
+        button:hover {
+            background-color: lightblue;
+        }
+        label{
+            font-size: 17px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="nameInput">Tên:</label>
+    <br>
+    <input type="text" id="nameInput" placeholder="Nhập tên của bạn">
+    <button onclick="sayHello()">Nhập</button>
+
+    <script>
+        function sayHello() {
+            var name = document.getElementById("nameInput").value;
+            console.log(`Hello ${name}`);
+        }
+    </script>
+</body>
+
+</html>
