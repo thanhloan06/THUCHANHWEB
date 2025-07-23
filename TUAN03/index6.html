@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            font-family: Arial, sans-serif;
+            background-color: lightgray;
+            height: 100%;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .flex-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+        }
+        .flex-item.reverse {
+            flex-direction: row-reverse;
+        }
+        .image {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .description {
+            max-width: 500px;
+        }
+        h3 {
+            font-weight: 700;
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #333333;
+        }
+        p {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <div class="container">
+          <div class="flex-item">
+            <img src="https://i.pinimg.com/736x/61/82/a6/6182a60af9a07cb2549f5f2f4d5c16a5.jpg" alt="Image Description" class="image">
+            <div class="description">
+              <h3>YUQI</h3>
+              <p><strong>Yuqi</strong>, tên đầy đủ là Song Yuqi, là một nữ ca sĩ người Trung Quốc, sinh 23/09/1999. Cô là thành viên của nhóm nhạc nữ Hàn Quốc có tên <strong>"IDLE"</strong> trực thuộc công ty CUBE Entertainment. Đảm nhận vai trò hát phụ, nhảy chính và là gương mặt đại diện của nhóm</p>
+            </div>
+          </div>
+      
+          <div class="flex-item reverse">
+            <img src="https://www.nme.com/wp-content/uploads/2024/03/gi-dle-song-yuqi-solo-debut-korea-april-2024.jpg" alt="Image Description" class="image">
+            <div class="description">
+              <p>Yuqi gây ấn tượng mạnh với khán giả nhờ chất giọng trầm đặc biệt, phong cách biểu diễn cá tính và sự hài hước duyên dáng. Ngoài hoạt động cùng IDLE, cô còn tham gia nhiều chương trình giải trí ở cả Hàn Quốc và Trung Quốc, cho thấy tài năng đa dạng và sức hút quốc tế. Với hình ảnh năng động, dễ mến cùng tài năng nổi bật, Yuqi ngày càng khẳng định vị trí của mình trong làng giải trí K-pop.</p>
+            </div>
+          </div>
+        </div>
+      </body>      
+</body>
+</html>
