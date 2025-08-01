@@ -1,0 +1,29 @@
+<!-- 9. Thẻ tín dụng
+Kiểm tra số thẻ tín dụng với Regex (già lập), 16 chữ số, có thể chia thành 4 nhóm 4 số cách nhau bằng dấu cách hoặc không có khoảng trắng.-->
+<!DOCTYPE html>
+<html>
+<body>
+  <h3>Nhập số thẻ tín dụng:</h3>
+  <input id="card" type="text">
+  <button onclick="check()">Kiểm tra</button>
+  <p id="result"></p>
+
+  <script>
+    function check() {
+      const card = document.getElementById("card").value.trim();
+      const result = document.getElementById("result");
+
+      // Regex: 16 số liền hoặc 4 nhóm 4 số cách nhau bằng dấu cách
+      const regex = /^(?:\d{4} ?){4}$/;
+
+      if (regex.test(card)) {
+        result.textContent = "Số thẻ hợp lệ!";
+        result.style.color = "green";
+      } else {
+        result.textContent = "Số thẻ không hợp lệ!";
+        result.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>

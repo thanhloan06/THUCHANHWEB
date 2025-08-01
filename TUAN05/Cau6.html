@@ -1,0 +1,27 @@
+<!-- 6. Username
+Tạo form nhập username, phải từ 5-15 ký tự, chỉ được dùng chữ cái, số và dấu gạch dưới _.-->
+<!DOCTYPE html>
+<html>
+<body>
+  <h3>Nhập username:</h3>
+  <input id="username" type="text">
+  <button onclick="check()">Kiểm tra</button>
+  <p id="result"></p>
+
+  <script>
+    function check() {
+      const username = document.getElementById("username").value.trim();
+      const result = document.getElementById("result");
+      const regex = /^[a-zA-Z0-9_]{5,15}$/;
+
+      if (regex.test(username)) {
+        result.textContent = "Username hợp lệ!";
+        result.style.color = "green";
+      } else {
+        result.textContent = "Username không hợp lệ!";
+        result.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>

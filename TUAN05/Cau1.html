@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <!-- 1. Email Validation
+Tạo một form yêu cầu người dùng nhập địa chỉ email. Kiểm tra định dạng phải hợp lệ (VD: example@domain.com)-->
+  <h3>Nhập email:</h3>
+  <input id="email" type="text">
+  <button onclick="check()">Kiểm tra</button>
+  <p id="result"></p>
+
+  <script>
+    function check() {
+      const email = document.getElementById("email").value.trim();
+      const result = document.getElementById("result");
+      const regex = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z]{2,}$/i;
+      if (regex.test(email)) {
+        result.textContent = "Email hợp lệ!";
+        result.style.color = "green";
+      } else {
+        result.textContent = "Email không hợp lệ!";
+        result.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>

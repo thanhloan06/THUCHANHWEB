@@ -1,0 +1,31 @@
+<!-- 3. Mật khẩu an toàn 
+Để một chuỗi (mật khẩu) hợp lệ, phải:
+-Dài ít nhất 8 ký tự.
+-Có ít nhất một chữ cái thường.
+-Có ít nhất một chữ cái in hoa.
+-Có ít nhất một số.-->
+<!DOCTYPE html>
+<html>
+<body>
+  <h3>Nhập mật khẩu:</h3>
+  <input id="password" type="text">
+  <button onclick="check()">Kiểm tra</button>
+  <p id="result"></p>
+
+  <script>
+    function check() {
+      const pass = document.getElementById("password").value.trim();
+      const result = document.getElementById("result");
+      const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
+      if (regex.test(pass)) {
+        result.textContent = "Mật khẩu hợp lệ!";
+        result.style.color = "green";
+      } else {
+        result.textContent = "Mật khẩu không hợp lệ!";
+        result.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>

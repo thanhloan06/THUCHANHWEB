@@ -1,0 +1,28 @@
+<!-- 7. Địa chỉ IP
+Input kiểm tra địa chỉ IP hợp lệ theo IPv4 (VD: 192.168.1.1)-->
+<!DOCTYPE html>
+<html>
+<body>
+  <h3>Nhập địa chỉ IP:</h3>
+  <input id="ip" type="text">
+  <button onclick="check()">Kiểm tra</button>
+  <p id="result"></p>
+
+  <script>
+    function check() {
+      const ip = document.getElementById("ip").value.trim();
+      const result = document.getElementById("result");
+
+      const regex = /^(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)$/;
+
+      if (regex.test(ip)) {
+        result.textContent = "Địa chỉ IP hợp lệ!";
+        result.style.color = "green";
+      } else {
+        result.textContent = "Địa chỉ IP không hợp lệ!";
+        result.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Bài tập nhập vào ngày đi về quê, hoặc chọn ngày, chỉ cho phép sau ngày hiện tại-->
+    <h2>Chọn ngày về quê:</h2>
+    <input id="inputdate" type="date">
+    <button id="btncheck">Nhập</button>
+    <p id="result"></p>
+
+    <script>
+        const inputdate = document.getElementById("inputdate");
+        const btncheck = document.getElementById("btncheck");
+        const result = document.getElementById("result");
+
+        const today = new Date();
+
+        const tomorrow = new Date(today);
+        tomorrow.setDate(today.getDate() + 1);
+
+        const minDate = tomorrow.toISOString().split("T")[0];
+        inputdate.min = minDate;
+
+        btncheck.onclick = function() {
+            const selectedDate = new Date(inputdate.value);
+
+            if (!inputdate.value) {
+                result.textContent = "Hãy chọn ngày đi!";
+                result.style.color = "red";
+            } else if (selectedDate <= today) {
+                result.textContent = "Chỉ cho phép sau ngày hiện tại!";
+                result.style.color = "red";
+            } else {
+                result.textContent = `Bạn sẽ về quê là ngày: ${inputdate.value}`;
+                result.style.color = "green";
+            }
+        };
+    </script>
+</body>
+
+</html>

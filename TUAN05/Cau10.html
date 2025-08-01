@@ -1,0 +1,27 @@
+<!-- 10. URL hợp lệ Input kiểm tra URL hợp lệ. -->
+<!DOCTYPE html>
+<html>
+<body>
+  <h3>Nhập URL:</h3>
+  <input id="url" type="text">
+  <button onclick="check()">Kiểm tra</button>
+  <p id="result"></p>
+
+  <script>
+    function check() {
+      const url = document.getElementById("url").value.trim();
+      const result = document.getElementById("result");
+
+      const regex = /^(https?:\/\/)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?$/;
+
+      if (regex.test(url)) {
+        result.textContent = "URL hợp lệ!";
+        result.style.color = "green";
+      } else {
+        result.textContent = "URL không hợp lệ!";
+        result.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>

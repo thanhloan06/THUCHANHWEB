@@ -1,0 +1,46 @@
+<!-- 5. Ngày sinh hợp lệ
+Input ngày sinh theo định dạng dd/mm/yyyy. Kiểm tra ngày phải đúng định dạng và hợp lệ (ví dụ: không có 31/02/2023)-->
+<!DOCTYPE html>
+<html>
+<body>
+  <h3>Nhập ngày sinh (dd/mm/yyyy):</h3>
+  <input id="dob" type="text" placeholder="dd/mm/yyyy">
+  <button onclick="check()">Kiểm tra</button>
+  <p id="result"></p>
+
+  <script>
+    function check() {
+      const dob = document.getElementById("dob").value.trim();
+      const result = document.getElementById("result");
+
+      // Regex kiểm tra định dạng dd/mm/yyyy
+      const regex = /^(\d{2})\/(\d{2})\/(\d{4})$/;
+      const match = dob.match(regex);
+
+      if (!match) {
+        result.textContent = "Sai định dạng! (dd/mm/yyyy)";
+        result.style.color = "red";
+        return;
+      }
+
+      const day = parseInt(match[1], 10);
+      const month = parseInt(match[2], 10) - 1; // Tháng trong JS bắt đầu từ 0
+      const year = parseInt(match[3], 10);
+
+      const date = new Date(year, month, day);
+
+      if (
+        date.getFullYear() === year &&
+        date.getMonth() === month &&
+        date.getDate() === day
+      ) {
+        result.textContent = "Ngày sinh hợp lệ!";
+        result.style.color = "green";
+      } else {
+        result.textContent = "Ngày sinh không hợp lệ!";
+        result.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>

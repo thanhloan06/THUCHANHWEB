@@ -1,0 +1,29 @@
+<!-- 4. Yêu cầu người dùng nhập họ tên không chứa số và ký tự đặc biệt. Không được để trống-->
+<!DOCTYPE html>
+<html>
+<body>
+  <h3>Nhập họ tên:</h3>
+  <input id="fullname" type="text">
+  <button onclick="check()">Kiểm tra</button>
+  <p id="result"></p>
+
+  <script>
+    function check() {
+      const name = document.getElementById("fullname").value.trim();
+      const result = document.getElementById("result");
+      const regex = /^[A-Za-zÀ-Ỹà-ỹ\s]+$/;
+
+      if (!name) {
+        result.textContent = "Không được để trống!";
+        result.style.color = "red";
+      } else if (regex.test(name)) {
+        result.textContent = "Họ tên hợp lệ!";
+        result.style.color = "green";
+      } else {
+        result.textContent = "Họ tên không hợp lệ!";
+        result.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>

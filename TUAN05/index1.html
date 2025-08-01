@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Bài tập nhập vào ngày sinh, hoặc chọn ngày, chỉ cho phép trước ngày hiện tại-->
+    <h2>Nhập ngày sinh:</h2>
+    <input id="inputdate" type="date">
+    <button id="btncheck">Nhập</button>
+    <p id="result"></p>
+
+    <script>
+        const inputdate = document.getElementById("inputdate");
+        const btncheck = document.getElementById("btncheck");
+        const result = document.getElementById("result");
+
+        const today = new Date().toISOString().split("T")[0];
+
+        inputdate.max = today;
+
+        btncheck.onclick = function() {
+            const selectedDate = new Date(inputdate.value);
+            const currentDate = new Date();
+
+            if (!inputdate.value) {
+                result.textContent = "Hãy chọn ngày sinh!";
+                result.style.color = "red";
+            } else if (selectedDate >= currentDate) {
+                result.textContent = "Ngày sinh không hợp lệ!";
+                result.style.color = "red";
+            } else {
+                result.textContent = `Ngày sinh của bạn là: ${inputdate.value}`;
+                result.style.color = "green";
+            }
+        };
+    </script>
+</body>
+
+</html>

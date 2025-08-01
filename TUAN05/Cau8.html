@@ -1,0 +1,27 @@
+<!-- 8. Mã bưu điện
+Yêu cầu nhập mã bưu điện Việt Nam (5 chữ số). Không chấp nhận chữ cái.-->
+<!DOCTYPE html>
+<html>
+<body>
+  <h3>Nhập mã bưu điện:</h3>
+  <input id="postal" type="text">
+  <button onclick="check()">Kiểm tra</button>
+  <p id="result"></p>
+
+  <script>
+    function check() {
+      const postal = document.getElementById("postal").value.trim();
+      const result = document.getElementById("result");
+      const regex = /^\d{5}$/;
+
+      if (regex.test(postal)) {
+        result.textContent = "Mã bưu điện hợp lệ!";
+        result.style.color = "green";
+      } else {
+        result.textContent = "Mã bưu điện không hợp lệ!";
+        result.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>

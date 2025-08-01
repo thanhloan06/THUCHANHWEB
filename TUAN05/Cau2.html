@@ -1,0 +1,27 @@
+<!-- 2. Số điện thoại Việt Nam
+Tạo một input để kiểm tra số điện thoại Việt Nam hợp lệ, bắt đầu bằng 0 và có 10 chữ số.-->
+<!DOCTYPE html>
+<html>
+<body>
+  <h3>Nhập số điện thoại:</h3>
+  <input id="phone" type="text">
+  <button onclick="check()">Kiểm tra</button>
+  <p id="result"></p>
+
+  <script>
+    function check() {
+      const phone = document.getElementById("phone").value.trim();
+      const result = document.getElementById("result");
+      const regex = /^0\d{9}$/; // Bắt đầu bằng 0, theo sau là 9 số nữa (tổng cộng 10 số)
+
+      if (regex.test(phone)) {
+        result.textContent = "Số điện thoại hợp lệ!";
+        result.style.color = "green";
+      } else {
+        result.textContent = "Số điện thoại không hợp lệ!";
+        result.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>

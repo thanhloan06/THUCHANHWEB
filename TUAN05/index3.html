@@ -1,0 +1,57 @@
+Cau3-index4:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Bài tập nhập vào ngày sinh => số tuổi của người-->
+    <h2>Nhập ngày sinh để tính tuổi:</h2>
+    <input id="inputdate" type="date">
+    <button id="btncheck">Tính</button>
+    <p id="result"></p>
+
+    <script>
+        const inputdate = document.getElementById("inputdate");
+        const btncheck = document.getElementById("btncheck");
+        const result = document.getElementById("result");
+
+        const today = new Date();
+        const maxDate = today.toISOString().split("T")[0];
+        inputdate.max = maxDate;
+
+        btncheck.onclick = function() {
+            if (!inputdate.value) {
+                result.textContent = "Vui lòng nhập ngày sinh.";
+                result.style.color = "red";
+                return;
+            }
+
+            const birthDate = new Date(inputdate.value);
+            const today = new Date();
+
+            let age = today.getFullYear() - birthDate.getFullYear();
+
+            const monthDiff = today.getMonth() - birthDate.getMonth();
+            const dayDiff = today.getDate() - birthDate.getDate();
+
+            if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+                age--;
+            }
+
+            if (age < 0) {
+                result.textContent = "Ngày sinh không hợp lệ!";
+                result.style.color = "red";
+            } else {
+                result.textContent = `${age} tuổi`;
+                result.style.color = "green";
+            }
+        };
+    </script>
+</body>
+
+</html>
